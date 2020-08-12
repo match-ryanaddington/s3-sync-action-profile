@@ -37,9 +37,7 @@ fi
 
 # Sync using our dedicated profile and suppress verbose messages.
 # All other flags are optional via the `args:` directive.
-sh -c "aws s3 sync ${SOURCE_DIR:-.} s3://${AWS_S3_BUCKET}/${DEST_DIR} \
-              --no-progress \
-              ${ENDPOINT_APPEND} $*"
+sh -c "aws s3 sync ${SOURCE_DIR:-.} s3://${AWS_S3_BUCKET}/${DEST_DIR} $*"
 
 # # Clear out credentials after we're done.
 # # We need to re-run `aws configure` with bogus input instead of
