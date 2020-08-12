@@ -22,10 +22,10 @@ if [ -z "$AWS_REGION" ]; then
   AWS_REGION="us-east-1"
 fi
 
-# Override default AWS endpoint if user sets AWS_S3_ENDPOINT.
-if [ -n "$AWS_S3_ENDPOINT" ]; then
-  ENDPOINT_APPEND="--endpoint-url $AWS_S3_ENDPOINT"
-fi
+# # Override default AWS endpoint if user sets AWS_S3_ENDPOINT.
+# if [ -n "$AWS_S3_ENDPOINT" ]; then
+#   ENDPOINT_APPEND="--endpoint-url $AWS_S3_ENDPOINT"
+# fi
 
 # # Create a dedicated profile for this action to avoid conflicts
 # # with past/future actions.
